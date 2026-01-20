@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aventura Tour - Solicitar Presupuesto</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <script defer src="../js/presupuesto.js"></script>
+</head>
+
+<body>
+  <header class="hero hero--small">
+    <div class="hero-content">
+      <h1>Presupuesto</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./galeria.html">Galería</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+      <li><a href="#" class="active">Solicitar Presupuesto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="container">
+      <h2>Pida un presupuesto</h2>
+      <p>Complete el formulario para recibir un presupuesto personalizado para su próxima aventura.</p>
+
+      <form id="formPresupuesto" class="form-card" novalidate>
+
+        <!-- =======================
+             PARTE 1: DATOS PERSONALES
+        ======================= -->
+        <fieldset class="form-section">
+          <legend class="section-title">Datos personales</legend>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" maxlength="15" required>
+              <small class="error" id="errNombre"></small>
+            </div>
+
+            <div class="field">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" maxlength="40" required>
+              <small class="error" id="errApellidos"></small>
+            </div>
+
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" maxlength="9" required>
+              <small class="error" id="errTelefono"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              <small class="error" id="errEmail"></small>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- =======================
+             PARTE 2: PRESUPUESTO
+        ======================= -->
+        <fieldset class="form-section">
+          <legend class="section-title">Presupuesto</legend>
+
+          <!-- Producto -->
+          <div class="field">
+            <label for="producto">Producto</label>
+
+            <div class="select-wrap">
+              <select id="producto" name="producto" required>
+                <option value="" disabled selected>Elige un producto…</option>
+                <option value="199">Escapada fin de semana (199€)</option>
+                <option value="599">Aventura 7 días (599€)</option>
+                <option value="1199">Expedición 14 días (1199€)</option>
+                <option value="2499">Gran tour 30 días (2499€)</option>
+                <option value="4999">Aventura épica 60 días (4999€)</option>
+              </select>
+            </div>
+
+            <small class="help">El precio base depende del producto seleccionado.</small>
+          </div>
+
+          <!-- Plazo -->
+          <div class="field">
+            <label for="plazo">Plazo (días)</label>
+            <input type="number" id="plazo" name="plazo" min="1" max="365" value="30" required>
+            <small class="help">
+              Descuento según plazo:
+              <strong>&ge; 60 días</strong> → 10%,
+              <strong>&ge; 90 días</strong> → 15%
+            </small>
+          </div>
+
+          <!-- Extras -->
+          <div class="field">
+            <p class="label">Extras</p>
+
+            <div class="extras-grid">
+              <label class="check">
+                <input type="checkbox" class="extra" value="49">
+                Seguro premium (+49€)
+              </label>
+
+              <label class="check">
+                <input type="checkbox" class="extra" value="79">
+                Guía local (+79€)
+              </label>
+
+              <label class="check">
+                <input type="checkbox" class="extra" value="99">
+                Pack aventura (+99€)
+              </label>
+
+              <label class="check">
+                <input type="checkbox" class="extra" value="59">
+                Traslados (+59€)
+              </label>
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="total-box" aria-live="polite">
+            <div>
+              <p class="total-label">Presupuesto final</p>
+              <p class="total-hint">Se actualiza automáticamente con tus elecciones.</p>
+            </div>
+
+            <div class="total-price">
+              <span id="total">0</span><span class="eur">€</span>
+            </div>
+
+            <input type="hidden" id="totalInput" name="total">
+          </div>
+
+          <!-- Condiciones -->
+          <div class="field">
+            <label class="check conditions">
+              <input type="checkbox" id="condiciones" required>
+              Acepto la política de privacidad y condiciones
+            </label>
+            <small class="error" id="errCondiciones"></small>
+          </div>
+
+          <!-- Botones -->
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Enviar presupuesto</button>
+            <button type="reset" class="btn-ghost">Reset</button>
+          </div>
+        </fieldset>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="30" height="30">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="30" height="30">
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
+      </a>
+      <a href="https://pinterest.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest" width="30" height="30">
+      </a>
+    </div>
+    <p>&copy; 2024 Aventura Tour. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

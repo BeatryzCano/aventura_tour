@@ -1,0 +1,149 @@
+{
+  "continentes": {
+    "europa": {
+      "nombre": "Europa",
+      "categorias": {
+        "capitales": [
+          { "nombre": "Madrid", "slug": "madrid", "desc": "Museos, tapas y vida urbana." },
+          { "nombre": "París", "slug": "paris", "desc": "Arte, moda y paseos por el Sena." },
+          { "nombre": "Roma", "slug": "roma", "desc": "Historia clásica y gastronomía." },
+          { "nombre": "Berlín", "slug": "berlin", "desc": "Cultura moderna y memoria histórica." },
+          { "nombre": "Lisboa", "slug": "lisboa", "desc": "Miradores y encanto atlántico." },
+          { "nombre": "Helsinki", "slug": "helsinki", "desc": "Diseño nórdico y mar." }
+        ],
+        "playa": [
+          { "nombre": "Costa mediterránea", "desc": "Calas y paseos junto al mar." },
+          { "nombre": "Islas", "desc": "Aguas tranquilas y relax." },
+          { "nombre": "Costa atlántica", "desc": "Playas amplias y naturaleza." }
+        ],
+        "montana": [
+          { "nombre": "Alpes", "desc": "Trekking y paisajes alpinos." },
+          { "nombre": "Pirineos", "desc": "Rutas entre valles." },
+          { "nombre": "Dolomitas", "desc": "Cumbres dramáticas." }
+        ],
+        "excursiones": [
+          { "nombre": "Senderismo", "desc": "Rutas para todos los niveles." },
+          { "nombre": "Rafting", "desc": "Aventura en ríos rápidos." },
+          { "nombre": "Tour histórico", "desc": "Monumentos y cultura." }
+        ]
+      }
+    },
+
+    "asia": {
+      "nombre": "Asia",
+      "categorias": {
+        "capitales": [
+          { "nombre": "Tokio", "slug": "tokio", "desc": "Tecnología y tradición." },
+          { "nombre": "Seúl", "slug": "seul", "desc": "K-cultura y barrios vibrantes." },
+          { "nombre": "Bangkok", "slug": "bangkok", "desc": "Mercados y templos." },
+          { "nombre": "Pekín", "slug": "pekin", "desc": "Historia imperial." },
+          { "nombre": "Singapur", "slug": "singapur", "desc": "Ciudad jardín." },
+          { "nombre": "Nueva Delhi", "slug": "nueva-delhi", "desc": "Tradición y contrastes." }
+        ],
+        "playa": [
+          { "nombre": "Islas tropicales", "desc": "Arena blanca y mar turquesa." },
+          { "nombre": "Costa del sudeste", "desc": "Calas y acantilados." },
+          { "nombre": "Lagunas", "desc": "Aguas tranquilas." }
+        ],
+        "montana": [
+          { "nombre": "Himalaya", "desc": "Cumbres legendarias." },
+          { "nombre": "Rutas volcánicas", "desc": "Paisajes únicos." },
+          { "nombre": "Montañas sagradas", "desc": "Cultura y trekking." }
+        ],
+        "excursiones": [
+          { "nombre": "Buceo", "desc": "Arrecifes y fauna marina." },
+          { "nombre": "Street food tour", "desc": "Ruta gastronómica." },
+          { "nombre": "Kayak", "desc": "Bahías y cuevas." }
+        ]
+      }
+    },
+
+    "africa": {
+      "nombre": "África",
+      "categorias": {
+        "capitales": [
+          { "nombre": "El Cairo", "slug": "el-cairo", "desc": "Historia y cultura." },
+          { "nombre": "Nairobi", "slug": "nairobi", "desc": "Ciudad y naturaleza." },
+          { "nombre": "Túnez", "slug": "tunez", "desc": "Medinas y tradición." },
+          { "nombre": "Dakar", "slug": "dakar", "desc": "Arte y océano." },
+          { "nombre": "Kampala", "slug": "kampala", "desc": "Lagos y vida urbana." },
+          { "nombre": "Pretoria", "slug": "pretoria", "desc": "Historia sudafricana." }
+        ],
+        "playa": [
+          { "nombre": "Costa índica", "desc": "Playas y arrecifes." },
+          { "nombre": "Costa atlántica", "desc": "Arena y puestas de sol." },
+          { "nombre": "Bahías", "desc": "Naturaleza y tranquilidad." }
+        ],
+        "montana": [
+          { "nombre": "Kilimanjaro", "desc": "Techo de África." },
+          { "nombre": "Atlas", "desc": "Rutas y pueblos." },
+          { "nombre": "Drakensberg", "desc": "Cañones y senderos." }
+        ],
+        "excursiones": [
+          { "nombre": "Desierto", "desc": "Dunas y cielo estrellado." },
+          { "nombre": "Snorkel", "desc": "Vida marina." },
+          { "nombre": "Fiesta local", "desc": "Música y baile." }
+        ]
+      }
+    },
+
+    "america": {
+      "nombre": "América",
+      "categorias": {
+        "capitales": [
+          { "nombre": "Washington", "slug": "washington", "desc": "Museos y monumentos." },
+          { "nombre": "Ottawa", "slug": "ottawa", "desc": "Canales y cultura." },
+          { "nombre": "Ciudad de México", "slug": "ciudad-de-mexico", "desc": "Historia y gastronomía." },
+          { "nombre": "La Habana", "slug": "la-habana", "desc": "Color y música." },
+          { "nombre": "Lima", "slug": "lima", "desc": "Capital gastronómica." },
+          { "nombre": "Buenos Aires", "slug": "buenos-aires", "desc": "Tango y arquitectura." }
+        ],
+        "playa": [
+          { "nombre": "Caribe", "desc": "Arena blanca y mar turquesa." },
+          { "nombre": "Costa pacífica", "desc": "Surf y naturaleza." },
+          { "nombre": "Islas", "desc": "Relax tropical." }
+        ],
+        "montana": [
+          { "nombre": "Andes", "desc": "Cordillera impresionante." },
+          { "nombre": "Patagonia", "desc": "Glaciares y trekking." },
+          { "nombre": "Yosemite", "desc": "Granito y cascadas." }
+        ],
+        "excursiones": [
+          { "nombre": "Paracaidismo", "desc": "Vistas épicas." },
+          { "nombre": "Rafting", "desc": "Aventura en el río." },
+          { "nombre": "Tour gastronómico", "desc": "Sabores locales." }
+        ]
+      }
+    },
+
+    "oceania": {
+      "nombre": "Oceanía",
+      "categorias": {
+        "capitales": [
+          { "nombre": "Canberra", "slug": "canberra", "desc": "Capital de Australia, museos y naturaleza." },
+          { "nombre": "Wellington", "slug": "wellington", "desc": "Capital de Nueva Zelanda, costa y cultura." },
+          { "nombre": "Suva", "slug": "suva", "desc": "Capital de Fiyi, ambiente tropical." },
+          { "nombre": "Port Moresby", "slug": "port-moresby", "desc": "Capital de Papúa Nueva Guinea." },
+          { "nombre": "Apia", "slug": "apia", "desc": "Capital de Samoa, vida isleña." },
+          { "nombre": "Nuku'alofa", "slug": "nukualofa", "desc": "Capital de Tonga, tradición polinesia." }
+        ],
+        "playa": [
+          { "nombre": "Arrecifes", "desc": "Snorkel, coral y aguas turquesa." },
+          { "nombre": "Playas de surf", "desc": "Olas y atardeceres." },
+          { "nombre": "Bahías", "desc": "Costa tranquila y naturaleza." }
+        ],
+        "montana": [
+          { "nombre": "Rutas volcánicas", "desc": "Paisajes volcánicos y miradores." },
+          { "nombre": "Montañas costeras", "desc": "Senderos con vistas al mar." },
+          { "nombre": "Parques nacionales", "desc": "Naturaleza y rutas señalizadas." }
+        ],
+        "excursiones": [
+          { "nombre": "Buceo", "desc": "Arrecifes y vida marina." },
+          { "nombre": "Surf", "desc": "Clases y spots famosos." },
+          { "nombre": "Senderismo", "desc": "Rutas por parques naturales." }
+        ]
+      }
+    }
+  }
+}
+

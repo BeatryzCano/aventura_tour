@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventura Tour - Galería</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+
+  <script defer src="../js/galeria.js"></script>
+</head>
+
+<body>
+  <header class="hero hero--small">
+    <div class="hero-content">
+      <h1>Galería</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="#" class="active">Galería</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+      <li><a href="./presupuesto.html">Solicitar Presupuesto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="container">
+      <h2>Explora por continente y temática</h2>
+      <p>Selecciona continente, tipo y destino. La galería se carga dinámicamente desde JSON.</p>
+
+      <div class="gallery-toolbar">
+        <div class="select-wrap">
+          <label class="sr-only" for="continentSelect">Continente</label>
+          <select id="continentSelect"></select>
+        </div>
+
+        <div class="select-wrap">
+          <label class="sr-only" for="typeSelect">Tipo</label>
+          <select id="typeSelect"></select>
+        </div>
+
+        <div class="select-wrap">
+          <label class="sr-only" for="destinationSelect">Destino</label>
+          <select id="destinationSelect"></select>
+        </div>
+
+        <input type="search" id="gallerySearch" placeholder="Buscar por nombre..." />
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid" aria-label="Galería dinámica"></div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-inner" role="dialog" aria-label="Vista ampliada">
+        <button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+
+        <figure class="lb-figure">
+          <img id="lbImage" alt="" />
+          <figcaption id="lbCaption"></figcaption>
+        </figure>
+
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="30" height="30">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="30" height="30">
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
+      </a>
+      <a href="https://pinterest.com" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest" width="30" height="30">
+      </a>
+    </div>
+    <p>&copy; 2024 Aventura Tour. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
