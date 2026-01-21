@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".noticias-container");
 
-  fetch("../assets/json/noticias.json") // Ajusta la ruta según tu proyecto
+  fetch("./assets/json/noticias.json") // Ajusta la ruta según tu proyecto
     .then(response => response.json())
     .then(noticias => {
       noticias.forEach(noticia => {
