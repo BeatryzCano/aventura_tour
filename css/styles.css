@@ -153,8 +153,6 @@ section {
 
 .hero--home {
     height: 70vh;
-  
-
 }
 
 .hero--small {
@@ -177,9 +175,6 @@ section {
   z-index: 3;
 }
 
-
-
-
 /* Clases para las imágenes del crossfade */
 .hero-bg {
   position: absolute;
@@ -200,9 +195,6 @@ section {
   opacity: 1;
 }
 
-
-
-
 .hero h1 {
   font-size: 5rem;
   margin-bottom: 0.5rem;
@@ -211,8 +203,6 @@ section {
 .hero p {
   font-size: 3rem;
 }
-
-
 
 /* =========================
    HERO RESPONSIVE (MÓVIL)
@@ -227,7 +217,6 @@ section {
     font-size: 2.2rem;
   }
 }
-
 
 @media (max-width: 768px) {
 
@@ -357,6 +346,36 @@ footer .social-icons img:hover {
   justify-content: space-between;
   margin-top: 2rem;
   list-style: none;
+}
+
+/* =========================
+   STEPS RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 768px) {
+
+  .steps {
+    display: flex;
+    flex-direction: column;   /* uno debajo de otro */
+    gap: 1.5rem;              /* espacio entre pasos */
+    padding-left: 0;          /* elimina sangría del <ol> */
+    list-style-position: inside;
+  }
+
+  .steps li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .steps li strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .steps li p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
 }
 
 
