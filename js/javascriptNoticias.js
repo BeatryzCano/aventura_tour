@@ -1,47 +1,57 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".noticias-container");
+  if (!contenedor) return;
 
-  fetch("./assets/json/noticias.json") // Ajusta la ruta según tu proyecto
-    .then(response => response.json())
-    .then(noticias => {
-      noticias.forEach(noticia => {
-        const div = document.createElement("div");
-        div.classList.add("noticia");
-        div.innerHTML = `
-          <h3>${noticia.titulo}</h3>
-          <p>${noticia.contenido}</p>
-        `;
-        contenedor.appendChild(div);
-      });
-    })
-    .catch(error => console.error("Error cargando noticias:", error));
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const contenedor = document.querySelector(".noticias-container");
   let currentIndex = 0;
   let noticiasData = [];
 
-  fetch("../assets/json/noticias.json")
-    .then(response => response.json())
-    .then(noticias => {
-      noticiasData = noticias;
+  // ✅ Ruta correcta para index.html (GitHub Pages incluido)
+  const urlNoticias = "./assets/json/noticias.json";
+
+  fetch(urlNoticias)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} al cargar ${urlNoticias}`);
+      }
+      return response.json();
+    })
+    .then((noticias) => {
+      // Acepta: array directo o { noticias: [...] }
+      noticiasData = Array.isArray(noticias) ? noticias : (noticias.noticias || []);
+
+      if (!noticiasData.length) {
+        contenedor.innerHTML = "<p>No hay noticias disponibles.</p>";
+        return;
+      }
+
       mostrarNoticias();
-      setInterval(mostrarNoticias, 10000); // Cambia cada 10 segundos
+      setInterval(mostrarNoticias, 10000); // cambia cada 10s
+    })
+    .catch((error) => {
+      console.error("Error cargando noticias:", error);
+      contenedor.innerHTML = "<p>No se pudieron cargar las noticias.</p>";
     });
 
   function mostrarNoticias() {
     contenedor.innerHTML = "";
-    for (let i = 0; i < 3; i++) {
-      const noticia = noticiasData[(currentIndex + i) % noticiasData.length];
+
+    const total = noticiasData.length;
+    const cantidad = Math.min(3, total); // por si hay menos de 3
+
+    for (let i = 0; i < cantidad; i++) {
+      const noticia = noticiasData[(currentIndex + i) % total];
+
       const div = document.createElement("div");
       div.classList.add("noticia");
-      div.innerHTML = `<h3>${noticia.titulo}</h3><p>${noticia.contenido}</p>`;
+      div.innerHTML = `
+        <h3>${noticia.titulo ?? "Sin título"}</h3>
+        <p>${noticia.contenido ?? ""}</p>
+      `;
+
       contenedor.appendChild(div);
     }
-    currentIndex = (currentIndex + 3) % noticiasData.length;
+
+    currentIndex = (currentIndex + cantidad) % total;
   }
 });
 
