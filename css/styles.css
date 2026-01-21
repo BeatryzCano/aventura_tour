@@ -218,6 +218,41 @@ section {
 
 
 /* =========================
+   HERO RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 768px) {
+
+  /* Hero pequeño (galería, contacto, presupuesto) */
+  .hero--small {
+    height: 20vh;          /* antes 40vh */
+    min-height: 140px;     /* evita que desaparezca */
+  }
+
+  /* Ajuste del texto dentro del hero */
+  .hero--small .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero--small {
+    height: 16vh;
+    min-height: 120px;
+  }
+
+  .hero--small .hero-content h1 {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+
+
+/* =========================
    NOTICIAS
 ========================= */
 
