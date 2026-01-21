@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!okContacto || !okPresupuesto || !okCond) return;
 
-    alert("✅ Formulario enviado correctamente (simulación).");
+    alert("✅ Formulario enviado correctamente.");
     form.reset();
     setError(errCondiciones, "");
     calcularTotal();
