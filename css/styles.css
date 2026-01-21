@@ -5,9 +5,6 @@
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 
-
-
-
 /* =========================
    VARIABLES DE COLOR
 ========================= */
@@ -220,6 +217,18 @@ section {
 /* =========================
    HERO RESPONSIVE (MÓVIL)
 ========================= */
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
 @media (max-width: 768px) {
 
   /* Hero pequeño (galería, contacto, presupuesto) */
@@ -245,9 +254,6 @@ section {
     font-size: 1.6rem;
   }
 }
-
-
-
 
 
 
@@ -291,6 +297,44 @@ section {
   color: var(--color-gris);
 }
 
+@media (max-width: 600px) {
+  .noticias-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: rgb(25, 38, 25);
+  color: var(--color-blanco);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+footer .social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .social-icons img {
+  width: 24px;
+  filter: invert(1);
+  transition: transform 0.3s;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+
 
 /*=========================
    INDEX - estilos exclusivos
@@ -314,10 +358,6 @@ section {
   margin-top: 2rem;
   list-style: none;
 }
-
-
-
-
 
 
 /*==============================================================================
@@ -526,22 +566,6 @@ section {
   .lightbox-inner{ grid-template-columns:1fr; }
   .lb-nav{ display:none; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* =========================
@@ -767,62 +791,6 @@ section {
 
 
 /* =========================
-   FOOTER
-========================= */
-footer {
-  background-color: rgb(25, 38, 25);
-  color: var(--color-blanco);
-  padding: 2rem;
-  text-align: center;
-}
-
-footer p {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-footer .social-icons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-footer .social-icons img {
-  width: 24px;
-  filter: invert(1);
-  transition: transform 0.3s;
-}
-
-footer .social-icons img:hover {
-  transform: scale(1.2);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  nav ul {
-    gap: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .noticias-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
-/* =========================
    CONTACTO - estilos exclusivos
 ========================= */
 
@@ -898,7 +866,4 @@ footer .social-icons img:hover {
     grid-template-columns: 1fr;
   }
 }
-
-
-
 
