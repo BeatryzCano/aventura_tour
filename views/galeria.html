@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aventura Tour - Galería</title>
 
   <link rel="stylesheet" href="../css/styles.css">
@@ -49,10 +49,9 @@
           <select id="destinationSelect"></select>
         </div>
 
-        <input type="search" id="gallerySearch" placeholder="Buscar por nombre..." />
+        <input type="search" id="gallerySearch" placeholder="Buscar por nombre...">
       </div>
-
-      <div id="galleryGrid" class="gallery-grid" aria-label="Galería dinámica"></div>
+      <div id="galleryGrid" class="gallery-grid" aria-live="polite" aria-relevant="additions removals"></div>
     </section>
 
     <!-- Lightbox -->
@@ -62,7 +61,7 @@
         <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
 
         <figure class="lb-figure">
-          <img id="lbImage" alt="" />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" id="lbImage" alt="Imagen ampliada de la galería">
           <figcaption id="lbCaption"></figcaption>
         </figure>
 

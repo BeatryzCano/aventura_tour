@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aventura Tour - Contáctanos</title>
 
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/contacto.css" />
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
   <!-- Leaflet (OpenStreetMap) -->
   <link
@@ -15,13 +14,13 @@
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""
-  />
+  >
 
   <!-- Leaflet Routing Machine -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
-  />
+  >
 
   <script
     defer
@@ -42,7 +41,7 @@
   </header>
 
   <nav class="navbar">
-    <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo" />
+    <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
     <ul>
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="./galeria.html">Galería</a></li>
@@ -67,7 +66,7 @@
           <p>Tel: +34 600 123 456</p>
           <p>Email: contacto@aventuratour.com</p>
 
-          <hr class="sep" />
+          <hr class="sep">
 
           <h3>Calcula tu ruta</h3>
 
@@ -80,11 +79,9 @@
           <!-- 2) Dirección -->
           <div class="field">
             <label for="direccionCliente">Dirección del cliente</label>
-            <input
-              type="text"
+            <input type="text"
               id="direccionCliente"
-              placeholder="Ej: Gran Vía 28, Madrid"
-            />
+              placeholder="Ej: Gran Vía 28, Madrid">
           </div>
           <button type="button" class="btn-ghost" id="btnDireccion">
             Calcular ruta desde la dirección
@@ -99,11 +96,11 @@
           <div class="mini-grid">
             <div class="field">
               <label for="latCliente">Latitud</label>
-              <input type="number" id="latCliente" step="0.000001" placeholder="40.4168" />
+              <input type="number" id="latCliente" step="0.000001" placeholder="40.4168">
             </div>
             <div class="field">
               <label for="lngCliente">Longitud</label>
-              <input type="number" id="lngCliente" step="0.000001" placeholder="-3.7038" />
+              <input type="number" id="lngCliente" step="0.000001" placeholder="-3.7038">
             </div>
           </div>
 
@@ -116,7 +113,7 @@
         </aside>
 
         <!-- Mapa -->
-        <div id="map" class="map-box" aria-label="Mapa de ubicación y ruta"></div>
+        <div id="map" class="map-box" role="region" aria-label="Mapa de ubicación y ruta"></div>
       </div>
     </section>
   </main>
@@ -124,16 +121,16 @@
   <footer>
     <div class="social-icons">
       <a href="https://facebook.com" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="30" height="30" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="30" height="30">
       </a>
       <a href="https://instagram.com" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="30" height="30" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="30" height="30">
       </a>
       <a href="https://linkedin.com" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="30" height="30" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
       </a>
       <a href="https://pinterest.com" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest" width="30" height="30" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest" width="30" height="30">
       </a>
     </div>
     <p>&copy; 2024 Aventura Tour. Todos los derechos reservados.</p>
