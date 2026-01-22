@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventura Tour</title>
-
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="./js/javascriptNoticias.js"></script>
     <script defer src="./js/heroSlider.js"></script>
+    <script defer src="./js/nav.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 </head>
 
@@ -24,10 +24,13 @@
 
     <!-- NAVEGACIÓN -->
     <nav class="navbar">
-
+        <a class="brand" href="./index.html">
         <img src="./assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
-
-        <ul>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
             <li><a href="#" class="active">Inicio</a></li>
             <li><a href="./views/galeria.html">Galería</a></li>
             <li><a href="./views/contacto.html">Contacto</a></li>

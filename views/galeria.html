@@ -9,6 +9,8 @@
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
   <script defer src="../js/galeria.js"></script>
+  <script defer src="../js/nav.js"></script>
+
 </head>
 
 <body>
@@ -19,8 +21,14 @@
   </header>
 
   <nav class="navbar">
-    <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
-    <ul>
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo.png" alt="Logo Aventura Tour" class="logo">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navMenu" class="nav-menu">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="#" class="active">Galería</a></li>
       <li><a href="./contacto.html">Contacto</a></li>

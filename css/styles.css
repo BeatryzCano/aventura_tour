@@ -113,6 +113,97 @@ header {
   border-bottom-color: rgba(255,255,255,0.55);
 }
 
+/* =========================
+   NAV HAMBURGUESA (RESPONSIVE)
+========================= */
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.brand{ display:flex; align-items:center; }
+
+/* Botón hamburguesa (oculto en desktop) */
+.nav-toggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.75);
+  border-radius:12px;
+  cursor:pointer;
+  padding:10px;
+}
+
+.nav-toggle span{
+  display:block;
+  height:2px;
+  width:100%;
+  background:var(--color-oscuro);
+  margin:6px 0;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+/*  lista versión  desktop*/
+.nav-menu{
+  display:flex;
+  gap:2rem;
+  list-style:none;
+  margin:0;
+  padding:1rem;
+}
+
+/* MÓVIL */
+@media (max-width: 768px){
+  .nav-toggle{ display:inline-flex; flex-direction:column; justify-content:center; }
+
+  /* el menú pasa a desplegable */
+  .nav-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+
+    display:none;              /* oculto por defecto */
+    flex-direction:column;
+    gap:0;
+
+    background: rgba(25,38,25,0.92); 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding:0.5rem 0;
+  }
+
+  .nav-menu li a{
+    display:block;
+    padding:0.9rem 1.2rem;
+    color:#fff;
+  }
+
+  .nav-menu li a:hover{
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* menú abierto */
+  .navbar.open .nav-menu{ display:flex; }
+
+  /* animación del icono a X */
+  .navbar.open .nav-toggle span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+  .navbar.open .nav-toggle span:nth-child(2){ opacity:0; }
+  .navbar.open .nav-toggle span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* HAMBURGUESA  para evitar que los estilos del desktop se apliquen en la versión móvil*/
+@media (max-width: 768px){
+  .navbar { position: sticky; top: 0; z-index: 2000; }
+  .nav-toggle { display: inline-flex !important; }
+  .nav-menu { display: none !important; }
+  .navbar.open .nav-menu { display: flex !important; }
+}
+
 
 
 
