@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Reglas de imagen:
   // - capitales: ../assets/images/galeria/capitales/<slug>.jpg
-  // - resto: ../assets/images/galeria/<continente>/<tipo>/1.jpg o 2.jpg (alternando)
+  // - resto: ../assets/images/galeria/<continente>/<tipo>/1.jpg , 2.jpg y 3.jpg (alternando)
   function resolveImage(continentKey, typeKey, entry, idxInList) {
     if (typeKey === "capitales") {
       return `../assets/images/galeria/capitales/${entry.slug}.jpg`;
     }
-    const n = (idxInList % 3) + 1; // alterna 1 y 2
+    const n = (idxInList % 3) + 1; // alterna 1, 2 y 3
     return `../assets/images/galeria/${continentKey}/${typeKey}/${n}.jpg`;
   }
 

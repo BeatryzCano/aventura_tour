@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ====== CONFIG: ubicación empresa (ficticia) ======
+  // ====== CONFIG: ubicación empresa ======
   const empresa = { lat: 40.4168, lng: -3.7038 }; // Madrid ejemplo
 
   // UI
